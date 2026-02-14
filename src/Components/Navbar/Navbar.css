@@ -1,0 +1,107 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #36178b26;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+.nav-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.logo {
+  font-size: 32px;
+  line-height: 61px;
+  text-align: center;
+}
+.navbar-search-container {
+  position: relative;
+  width: 170px;
+}
+.navbar-search-container input {
+  width: 100%;
+  padding: 8px 8px 8px 30px; /* sola boşluq veririk ki, icon görünsün */
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #fcf9f952;
+  background-color: black;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: #fcf9f9;
+  pointer-events: none;
+  color: gray;
+  font-size: #fff;
+  font-weight: bold;
+}
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .logo {
+    font-size: 20px;
+  }
+  .nav-links-container {
+    gap: 25px;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .navbar-search-container input {
+    padding: 4px 4px 4px 30px; /* sola boşluq veririk ki, icon görünsün */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    /* border-bottom: 1px solid #fff; */
+    justify-content: center;
+  }
+  .nav-links-container {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    z-index: 3;
+    background-color: black;
+    border-radius: 20px;
+  }
+  .nav-links-container.active {
+    display: flex;
+    padding: 20px 0;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: black;
+  }
+  .navbar-search-container {
+    display: none;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 30px;
+  }
+}
