@@ -1,6 +1,5 @@
 import React from "react";
 import "./AboutArticle.css";
-import robot from "../../assets/robot.jpg";
 const AboutArticle = () => {
   // const [articles, setArticles] = useState([]);
 
@@ -61,3 +60,4 @@ const AboutArticle = () => {
 };
 
 export default AboutArticle;
+
